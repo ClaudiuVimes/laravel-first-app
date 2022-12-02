@@ -15,8 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    Debugbar::warning('info');
-    return view('welcome');
-});
 
+Route::get('/blog', [PostsController::class, 'index']);
