@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\PostsController;
 use Barryvdh\Debugbar\Facades\Debugbar;
 use Barryvdh\Debugbar\Twig\Extension\Debug;
 use Illuminate\Support\Facades\Route;
@@ -16,4 +18,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/blog', [PostsController::class, 'PostsController@index']);
+// Route::get('/blog', [PostsController::class, 'index']);
+Route::resource('blog', PostsController::class);
