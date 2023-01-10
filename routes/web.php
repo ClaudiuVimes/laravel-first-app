@@ -6,7 +6,8 @@ use Barryvdh\Debugbar\Twig\Extension\Debug;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
    Controller,
-   PostsController,
+    FallbackController,
+    PostsController,
    HomeController
 };
 
@@ -62,3 +63,7 @@ Route::get('/', HomeController::class);
 
 
 // Route::get('/blog', [PostsController::class, 'index']);
+
+// Fallback Route
+
+Route::fallback(FallbackController::class);
